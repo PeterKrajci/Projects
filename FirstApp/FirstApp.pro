@@ -4,6 +4,7 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
 
+
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
@@ -18,6 +19,8 @@ HEADERS += \
 FORMS += \
     mainwindow.ui
 
+
+
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
@@ -25,5 +28,21 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 unix|win32: LIBS += -L$$PWD/../build-MyLib-Desktop-Debug/ -lMyLib
 
+
+INCLUDEPATH +=/usr/include/python3.8
 INCLUDEPATH += $$PWD/../MyLib
 DEPENDPATH += $$PWD/../MyLib
+
+
+
+
+
+
+
+
+unix|win32: LIBS += -L$$PWD/../../../../../usr/lib/ -lpython3.8
+
+INCLUDEPATH += $$PWD/../../../../../usr/lib
+DEPENDPATH += $$PWD/../../../../../usr/lib
+
+DISTFILES +=

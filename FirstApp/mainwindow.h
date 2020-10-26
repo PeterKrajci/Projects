@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include "mylib.h"
+#include <iostream>
+using namespace std;
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -16,8 +18,12 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+    void pythonEmbedding();
+
 private slots:
     void on_Button_clicked();
+
+    void on_PyButton_clicked();
 
 private:
     Ui::MainWindow *ui;

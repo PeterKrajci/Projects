@@ -26,6 +26,7 @@ public:
     QWidget *centralwidget;
     QPushButton *Button;
     QLabel *label;
+    QPushButton *PyButton;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -42,6 +43,9 @@ public:
         label = new QLabel(centralwidget);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(276, 210, 171, 91));
+        PyButton = new QPushButton(centralwidget);
+        PyButton->setObjectName(QString::fromUtf8("PyButton"));
+        PyButton->setGeometry(QRect(540, 90, 95, 34));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -61,6 +65,7 @@ public:
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         Button->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
         label->setText(QString());
+        PyButton->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
     } // retranslateUi
 
 };
